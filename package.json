@@ -1,0 +1,17 @@
+{
+  "name": "avatar-ai-educator",
+  "version": "1.0.0",
+  "description": "An interactive AI education app with a lifelike avatar tutor that delivers personalized lessons, answers questions in real time, tracks progress, supports multiple languages, and adapts to each learner’s style—powered by FastAPI, Supabase, and LLMs, accessible on any device.",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

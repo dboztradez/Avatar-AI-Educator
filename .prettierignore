@@ -1,0 +1,16 @@
+# Backend / Python
+app/**
+**/*.py
+venv/
+.venv/
+__pycache__/
+
+# Build & deps
+node_modules/
+dist/
+out/
+build/
+
+# Misc
+coverage/
+*.min.js
