@@ -205,3 +205,33 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Secrets & keys
+.env.*
+*.pem
+*.key
+.sentryclirc
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Frontend (if you add a build step later)
+node_modules/
+.next/
+out/
+dist/
+*.map
+
+# Render / Vercel (optional)
+render.yaml.lock
+.vercel/
+
+# Supabase local metadata (keep migrations tracked)
+supabase/.temp/
+supabase/.branches/
+
+# Misc
+*.bak
