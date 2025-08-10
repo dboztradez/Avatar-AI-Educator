@@ -1,7 +1,11 @@
 cat > docs/QuickStart_Reference_Guide_Condensed.md <<'MD'
 # QuickStart Guides — Condensed Outlines & Summaries
 
-## 📚 Resources & Guides
+## 📚 Resources ## 📚 Resources & Guides Guides
+- [Semester Plan](docs/Semester_Plan.md)
+- [QuickStart Reference — Full (MD)](docs/QuickStart_Reference_Guide.md)
+- [QuickStart Reference — Condensed (MD)](docs/QuickStart_Reference_Guide_Condensed.md)
+- [Semester 1 — Final Stack](docs/Semester-1_Final_Stack.md)
 - [QuickStart Reference (Condensed)](docs/QuickStart_Reference_Guide_Condensed.md)
 - [Revised Semester Plan](docs/Revised_Semester_Plan.md)
 - [Semester 1 — Final Stack](docs/Semester-1_Final_Stack.md)
