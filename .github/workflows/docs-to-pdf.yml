@@ -4,17 +4,25 @@ on:
     branches: [ "main" ]
     paths:
       - "docs/**.md"
+      - "docs/theme.css"
       - ".github/workflows/docs-to-pdf.yml"
+
 jobs:
   md_to_pdf:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # allow committing back to the repo
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Install pandoc & wkhtmltopdf
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc wkhtmltopdf
+
       - name: Convert Markdown to PDF
         run: |
           shopt -s nullglob
@@ -27,8 +35,9 @@ jobs:
               --metadata title="$(basename "${f%.md}")" \
               --toc --toc-depth=3
           done
-      - name: Upload PDFs as artifacts (optional)
-        uses: actions/upload-artifact@v4
+
+      - name: Commit PDFs
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: docs-pdfs
-          path: docs/*.pdf
+          commit_message: "docs: auto-build PDFs from Markdown"
+          file_pattern: docs/*.pdf
