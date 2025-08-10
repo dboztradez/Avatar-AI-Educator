@@ -235,3 +235,15 @@ supabase/.branches/
 
 # Misc
 *.bak
+# Editor/OS junk
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+.DS_Store
+Thumbs.db
+
+# VS Code local (keep if you want to share settings)
+.vscode/
