@@ -1,11 +1,4 @@
-cat > docs/QuickStart_Reference_Guide_Condensed.md <<'MD'
 # QuickStart Guides — Condensed Outlines & Summaries
-
-## 📚 Resources & Guides
-- [QuickStart Reference (Condensed)](docs/QuickStart_Reference_Guide_Condensed.md)
-- [Revised Semester Plan](docs/Revised_Semester_Plan.md)
-- [Semester 1 — Final Stack](docs/Semester-1_Final_Stack.md)
-
 
 ## Python
 **Summary:** Hands-on intro covering syntax, data structures, control flow, functions, OOP, files, errors, libraries/APIs, basic testing/optimization.
@@ -25,7 +18,3 @@ cat > docs/QuickStart_Reference_Guide_Condensed.md <<'MD'
 
 ---
 These outlines are condensed for ~4–5 printed pages; see the full reference for detailed tables.
-MD
-# Avatar-AI-Educator
-
-An interactive AI education app with a lifelike avatar tutor that delivers personalized lessons, answers questions in real time, tracks progress, supports multiple languages, and adapts to each learner’s style—powered by FastAPI, Supabase, and LLMs, accessible on any device.
