@@ -38,7 +38,7 @@ jobs:
       - run: pytest -q
 
   deploy_render:
-    if: false   # flip to true later (or guard with vars.RENDER_DEPLOY == 'true')
+    if: false # flip to true later (or guard with vars.RENDER_DEPLOY == 'true')
     needs: [frontend_prettier, backend_python]
     runs-on: ubuntu-latest
     steps:

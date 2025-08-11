@@ -5,6 +5,7 @@
 ---
 
 ## Semester 1 — Foundations
+
 - **Languages & Web**: Python fundamentals; HTML & CSS basics
 - **Quality**: Prettier (frontend), Flake8 + pytest (backend), EditorConfig
 - **Accessibility**: Landmarks, alt text, keyboard traps
@@ -18,6 +19,7 @@
 ---
 
 ## Semester 2 — Interactivity → Modern SPA
+
 - **Frontend**: React + TypeScript (keep HTMX “lite” path)
 - **State/Data**: React Query (or Redux), forms, validation
 - **APIs**: REST **and** GraphQL facades to same data
@@ -28,6 +30,7 @@
 ---
 
 ## Semester 3 — Reimagination + AI
+
 - **LLM Engineering**: Prompt patterns, retrieval (RAG), agents (LangChain)
 - **Personalization**: Background jobs/queues, analytics-driven difficulty
 - **Platform**: Dockerize services; container CI
@@ -37,6 +40,7 @@
 ---
 
 ## Semester 4 — Growth & Monetization
+
 - **Monetize**: Stripe subscriptions, targeted AdSense (as appropriate)
 - **Product Analytics**: Event taxonomy, funnels, A/B tests
 - **Ops**: SLOs, dashboards, incident runbooks, SEO checklist
