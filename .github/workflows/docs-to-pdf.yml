@@ -1,17 +1,17 @@
 name: Build Docs PDFs
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
     paths:
-      - "docs/**.md"
-      - "docs/theme.css"
-      - ".github/workflows/docs-to-pdf.yml"
+      - 'docs/**.md'
+      - 'docs/theme.css'
+      - '.github/workflows/docs-to-pdf.yml'
 
 jobs:
   md_to_pdf:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # allow committing back to the repo
+      contents: write # allow committing back to the repo
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,5 +39,5 @@ jobs:
       - name: Commit PDFs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: auto-build PDFs from Markdown"
+          commit_message: 'docs: auto-build PDFs from Markdown'
           file_pattern: docs/*.pdf
