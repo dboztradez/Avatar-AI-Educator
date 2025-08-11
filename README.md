@@ -8,3 +8,4 @@ An interactive AI education app with a lifelike avatar tutor that delivers perso
 - [QuickStart Reference — Condensed](docs/QuickStart_Reference_Guide_Condensed.md)
 - [Semester 1 — Final Stack](docs/Semester-1_Final_Stack.md)
 
+
