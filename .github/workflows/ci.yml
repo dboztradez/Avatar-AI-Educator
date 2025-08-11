@@ -1,46 +1,30 @@
 name: CI (Prettier + Python)
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  push:
 
 jobs:
   frontend_prettier:
+    if: ${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx', 'package.json') != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-      - run: npm ci || npm install
-      - run: npm run format:check
+        with: { node-version: '20' }
+      - run: npm ci || npm i
+      - run: npx prettier . --check
 
   backend_python:
+    if: ${{ hashFiles('**/*.py') != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
+        with: { python-version: '3.11' }
       - run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           pip install pytest flake8
       - run: flake8 .
       - run: pytest -q
-
-  deploy_render:
-    if: false # flip to true later (or guard with vars.RENDER_DEPLOY == 'true')
-    needs: [frontend_prettier, backend_python]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Placeholder
-        run: echo "Render deploy disabled"
