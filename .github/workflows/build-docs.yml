@@ -1,0 +1,19 @@
+name: Build Docs PDFs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build-pdfs:
+    name: md_to_pdf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Simulate docs build
+        run: |
+          echo "Pretending to build PDFs from docs/..."
+          mkdir -p build
+          echo "PDF build complete" > build/output.txt
