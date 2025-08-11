@@ -3,15 +3,15 @@ name: Build Docs PDFs
 on:
   pull_request:
     paths:
-      - "docs/**.md"
-      - "docs/theme.css"
-      - ".github/workflows/build-docs.yml"
+      - 'docs/**.md'
+      - 'docs/theme.css'
+      - '.github/workflows/build-docs.yml'
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - "docs/**.md"
-      - "docs/theme.css"
-      - ".github/workflows/build-docs.yml"
+      - 'docs/**.md'
+      - 'docs/theme.css'
+      - '.github/workflows/build-docs.yml'
 
 jobs:
   build-pdfs:
@@ -98,5 +98,5 @@ jobs:
       - name: Commit PDFs back to repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: auto-build PDFs from Markdown"
+          commit_message: 'docs: auto-build PDFs from Markdown'
 file_pattern: docs/*.pdf
