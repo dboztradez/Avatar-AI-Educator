@@ -99,7 +99,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: auto-build PDFs from Markdown"
-          file_pattern: docs/*.pdf
-git add .github/workflows/build-docs.yml
-git commit -m "ci(docs): replace placeholder with real Pandoc PDF builder"
-git push
+file_pattern: docs/*.pdf
